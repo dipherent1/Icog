@@ -1,36 +1,25 @@
-; Base case: an empty list or single-element list is already sorted
-(= (merge-sort ()) ()) ; Empty list
-(= (merge-sort (:: $x ())) (:: $x ())) ; Single-element list
+; Base case: An empty list or single-element list is already sorted
+(= (bubble-sort ()) ())  
+(= (bubble-sort (:: $x ())) (:: $x ()))  
 
-; Recursive case: split the list into two halves, sort them, and merge the results
-(= (merge-sort $list)
-    (let
-        $halves (split $list)
-        $left (car $halves)
-        $right (cdr $halves)
-        (merge (merge-sort $left) (merge-sort $right))))
+; Bubble pass: Move the largest element to the end
+(= (bubble-pass ()) ())  
+(= (bubble-pass (:: $x ())) (:: $x ()))  
 
-; Merge two sorted lists into one sorted list
-(= (merge () $list2) $list2) ; If the first list is empty, return the second
-(= (merge $list1 ()) $list1) ; If the second list is empty, return the first
-(= (merge (:: $x $xs) (:: $y $ys))
-    (if (< $x $y)
-        (:: $x (merge $xs (:: $y $ys))) ; Add $x first if it’s smaller
-        (:: $y (merge (:: $x $xs) $ys)))) ; Add $y first if it’s smaller
+(= (bubble-pass (:: $x (:: $y $rest)))
+    (if (> $x $y)  
+        (:: $y (bubble-pass (:: $x $rest)))  ; Swap if $x > $y
+        (:: $x (bubble-pass (:: $y $rest)))  ; Keep order otherwise
+    )
+)
 
-; Split a list into two halves
-(= (split ()) (tuple () ())) ; Split an empty list into two empty lists
-(= (split (:: $x ())) (tuple (:: $x ()) ())) ; A single-element list stays in one half
-(= (split (:: $x (:: $y $rest)))
-    (let
-        $halves (split $rest)
-        $left (car $halves)
-        $right (cdr $halves)
-        (tuple (:: $x $left) (:: $y $right)))) ; Distribute elements alternately
+; Bubble Sort: Apply Bubble Pass repeatedly until sorted
+(= (bubble-sort $list)
+    (if (== (bubble-pass $list) $list)  
+        $list  ; Stop if no swaps happened
+        (bubble-sort (bubble-pass $list))  ; Otherwise, continue sorting
+    )
+)
 
-; Utility functions: car and cdr for tuples
-(= (car (tuple $a $b)) $a)
-(= (cdr (tuple $a $b)) $b)
-
-; Query: Sort a list using merge sort
-!(merge-sort (:: 5 (:: 3 (:: 8 (:: 2 (:: 7 ())))))
+; Query: Sort a list using Bubble Sort
+!(bubble-sort (:: 5 (:: 3 (:: 8 (:: 2 (:: 7 ()))))))
