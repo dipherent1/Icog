@@ -1,0 +1,23 @@
+{
+    "summary": {
+        "num_errors": 1,
+        "num_failures": 0,
+        "num_skips": 0,
+        "num_tests": 1
+    },
+    "tests": [
+        {
+            "data": {
+                "execution_problem": "Input staging problem: Test input file (2.fastq) cannot be found.",
+                "status": "error",
+                "test_index": 0,
+                "time_seconds": 0.05210995674133301,
+                "tool_id": "seqtk_seq",
+                "tool_version": "0.1.0+galaxy0"
+            },
+            "has_data": true,
+            "id": "seqtk_seq-0"
+        }
+    ],
+    "version": "0.1"
+}
