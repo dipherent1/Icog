@@ -1,0 +1,24 @@
+<tool id="hello_galaxy" name="Hello Galaxy" version="0.1.0">
+    <command><![CDATA[
+        echo "$message" > $output
+    ]]></command>
+    <inputs>
+        <param name="message" type="text" label="Message to Display" value="Hello, Galaxy!"/>
+    </inputs>
+    <outputs>
+        <data name="output" format="txt" label="Custom Message Output"/>
+    </outputs>
+    <tests>
+        <test>
+            <!-- Provide the input message -->
+            <param name="message" value="Hello, Galaxy!" />
+    
+            <!-- Check if the output matches the expected output file -->
+            <output name="output" value="expected_output.txt"/>
+        </test>
+    </tests>
+    
+    <help><![CDATA[
+        This tool outputs a custom message to a text file. You can enter your own message in the input box.
+    ]]></help>
+</tool>

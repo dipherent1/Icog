@@ -1,0 +1,68 @@
+{
+    "summary": {
+        "num_errors": 0,
+        "num_failures": 0,
+        "num_skips": 0,
+        "num_tests": 1
+    },
+    "tests": [
+        {
+            "data": {
+                "inputs": {
+                    "message": "Hello, Galaxy!"
+                },
+                "job": {
+                    "command_line": "echo \"Hello, Galaxy!\" > /tmp/tmpv92l311h/job_working_directory/000/1/outputs/dataset_f694c5b5-7bc9-4bb6-a7f1-dcd84618b497.dat",
+                    "command_version": "",
+                    "copied_from_job_id": null,
+                    "create_time": "2025-02-02T14:18:35.719625",
+                    "dependencies": [],
+                    "exit_code": 0,
+                    "external_id": "99462",
+                    "galaxy_version": "25.0",
+                    "handler": null,
+                    "history_id": "4d31218a65e1fbd1",
+                    "id": "4d31218a65e1fbd1",
+                    "inputs": {},
+                    "job_messages": [],
+                    "job_metrics": [],
+                    "job_runner_name": null,
+                    "job_stderr": "",
+                    "job_stdout": "",
+                    "model_class": "Job",
+                    "output_collections": {},
+                    "outputs": {
+                        "output": {
+                            "id": "4d31218a65e1fbd1",
+                            "src": "hda",
+                            "uuid": "f694c5b5-7bc9-4bb6-a7f1-dcd84618b497"
+                        }
+                    },
+                    "params": {
+                        "__input_ext": "\"data\"",
+                        "chromInfo": "\"/home/biniam/galaxy/tool-data/shared/ucsc/chrom/?.len\"",
+                        "dbkey": "\"?\"",
+                        "message": "\"Hello, Galaxy!\""
+                    },
+                    "state": "ok",
+                    "stderr": "",
+                    "stdout": "",
+                    "tool_id": "hello_galaxy",
+                    "tool_stderr": "",
+                    "tool_stdout": "",
+                    "update_time": "2025-02-02T14:18:42.092996",
+                    "user_email": "planemo@galaxyproject.org",
+                    "user_id": "4d31218a65e1fbd1"
+                },
+                "status": "success",
+                "test_index": 0,
+                "time_seconds": 6.582589864730835,
+                "tool_id": "hello_galaxy",
+                "tool_version": "0.1.0"
+            },
+            "has_data": true,
+            "id": "hello_galaxy-0"
+        }
+    ],
+    "version": "0.1"
+}
