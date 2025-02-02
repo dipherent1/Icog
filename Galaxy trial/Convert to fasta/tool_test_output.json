@@ -1,0 +1,76 @@
+{
+    "summary": {
+        "num_errors": 0,
+        "num_failures": 0,
+        "num_skips": 0,
+        "num_tests": 1
+    },
+    "tests": [
+        {
+            "data": {
+                "inputs": {
+                    "input1": {
+                        "id": "05e4764a3e2fd38f",
+                        "src": "hda"
+                    }
+                },
+                "job": {
+                    "command_line": "seqtk seq -A '/tmp/tmpwga537hg/files/b/d/e/dataset_bde499c4-957e-4d72-a130-b0d187a407af.dat' > '/tmp/tmpwga537hg/job_working_directory/000/2/outputs/dataset_391e9a96-730f-4e32-b65a-0f1d29c608d4.dat'",
+                    "command_version": "",
+                    "copied_from_job_id": null,
+                    "create_time": "2025-02-02T13:23:01.362706",
+                    "dependencies": [],
+                    "exit_code": 0,
+                    "external_id": "90207",
+                    "galaxy_version": "25.0",
+                    "handler": null,
+                    "history_id": "05e4764a3e2fd38f",
+                    "id": "1493ff0143baf3c5",
+                    "inputs": {
+                        "input1": {
+                            "id": "05e4764a3e2fd38f",
+                            "src": "hda",
+                            "uuid": "bde499c4-957e-4d72-a130-b0d187a407af"
+                        }
+                    },
+                    "job_messages": [],
+                    "job_metrics": [],
+                    "job_runner_name": null,
+                    "job_stderr": "",
+                    "job_stdout": "",
+                    "model_class": "Job",
+                    "output_collections": {},
+                    "outputs": {
+                        "output1": {
+                            "id": "1493ff0143baf3c5",
+                            "src": "hda",
+                            "uuid": "391e9a96-730f-4e32-b65a-0f1d29c608d4"
+                        }
+                    },
+                    "params": {
+                        "__input_ext": "\"input\"",
+                        "chromInfo": "\"/home/biniam/galaxy/tool-data/shared/ucsc/chrom/?.len\"",
+                        "dbkey": "\"?\""
+                    },
+                    "state": "ok",
+                    "stderr": "",
+                    "stdout": "",
+                    "tool_id": "seqtk_seq",
+                    "tool_stderr": "",
+                    "tool_stdout": "",
+                    "update_time": "2025-02-02T13:23:17.811882",
+                    "user_email": "planemo@galaxyproject.org",
+                    "user_id": "05e4764a3e2fd38f"
+                },
+                "status": "success",
+                "test_index": 0,
+                "time_seconds": 27.788159132003784,
+                "tool_id": "seqtk_seq",
+                "tool_version": "0.1.0+galaxy0"
+            },
+            "has_data": true,
+            "id": "seqtk_seq-0"
+        }
+    ],
+    "version": "0.1"
+}
