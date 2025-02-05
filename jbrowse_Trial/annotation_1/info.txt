@@ -1,1 +1,0 @@
-This data is a SARS-COV-2 annotated sequence
