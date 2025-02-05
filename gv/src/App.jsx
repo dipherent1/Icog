@@ -62,9 +62,11 @@ const viewState = createViewState({
 
 export default function App() {
   return (
-    <div style={{ height: '600px', width: '100%' }}>
-      <h1 style={{ textAlign: 'center' }}>Genome Viewer</h1>
-      <JBrowseLinearGenomeView viewState={viewState} />
+    <div style={{ height: '100vh', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f0f0f0' }}>
+      <h1 style={{ textAlign: 'center', color: '#333', marginBottom: '20px' }}>Genome Viewer</h1>
+      <div style={{ height: '80%', width: '90%', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', borderRadius: '8px', overflow: 'hidden', backgroundColor: '#fff' }}>
+        <JBrowseLinearGenomeView viewState={viewState} />
+      </div>
     </div>
   );
 }
