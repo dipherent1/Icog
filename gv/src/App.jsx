@@ -21,6 +21,36 @@ const viewState = createViewState({
       },
     },
   },
+  tracks: [
+    {
+      type: 'ReferenceSequenceTrack',
+      trackId: 'hg38_refseq',
+      adapter: {
+        type: 'BgzipFastaAdapter',
+        fastaLocation: {
+          uri: 'https://jbrowse.org/genomes/GRCh38/fasta/hg38.prefix.fa.gz',
+        },
+        faiLocation: {
+          uri: 'https://jbrowse.org/genomes/GRCh38/fasta/hg38.prefix.fa.gz.fai',
+        },
+        gziLocation: {
+          uri: 'https://jbrowse.org/genomes/GRCh38/fasta/hg38.prefix.fa.gz.gzi',
+        },
+      },
+    },
+    {
+      type: 'FeatureTrack',
+      trackId: 'grch38_pls_bed',
+      name: 'GRCh38 PLS BED',
+      assemblyNames: ['hg38'],
+      adapter: {
+        type: 'BedAdapter',
+        bedLocation: {
+          uri: '/genome-data/GRCh38-PLS.bed',  // Ensure the file is in the `public/genome-data` folder
+        },
+      },
+    },
+  ],
   defaultSession: {
     name: 'Basic Genome View',
     view: {
