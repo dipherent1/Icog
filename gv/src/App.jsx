@@ -4,28 +4,10 @@ import { createViewState, JBrowseLinearGenomeView } from '@jbrowse/react-linear-
 
 // import tracks from tracks.jsx
 import tracks from './tracks';
-
+import assembly from './assembly';
 
 const viewState = createViewState({
-  assembly: {
-    name: 'hg38',
-    sequence: {
-      type: 'ReferenceSequenceTrack',
-      trackId: 'hg38_refseq',
-      adapter: {
-        type: 'BgzipFastaAdapter',
-        fastaLocation: {
-          uri: 'https://jbrowse.org/genomes/GRCh38/fasta/hg38.prefix.fa.gz',
-        },
-        faiLocation: {
-          uri: 'https://jbrowse.org/genomes/GRCh38/fasta/hg38.prefix.fa.gz.fai',
-        },
-        gziLocation: {
-          uri: 'https://jbrowse.org/genomes/GRCh38/fasta/hg38.prefix.fa.gz.gzi',
-        },
-      },
-    },
-  },
+  assembly: assembly,
   tracks: tracks,
   defaultSession: {
     name: 'Basic Genome View',
